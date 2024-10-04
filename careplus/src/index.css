@@ -8,6 +8,16 @@
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 100%;
   margin: 0 auto;
+}
+
+.slide-item{
+  width: 77%;
+  height: 70%;
+
+}
+
+body{
+  background-color: #fbfbfb;
 }
