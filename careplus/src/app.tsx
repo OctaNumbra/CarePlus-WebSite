@@ -1,6 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Clock8, CalendarCheck, Users, Headset } from "lucide-react";
+import {
+  Clock8,
+  CalendarCheck,
+  Users,
+  Headset,
+  ClipboardCheck,
+  CircleCheck,
+} from "lucide-react";
 
 function App() {
   const data = [
@@ -16,23 +23,23 @@ function App() {
       <div className="flex items-center justify-between p-4">
         <div className="flex-1 flex justify-center">
           <img src="./CarePlus.svg" alt="CarePlus Logo" className="h-14 w-14" />
-          <div className="flex space-x-10 bg-neutral-200 p-4 rounded-full">
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+          <div className="flex space-x-10 bg-neutral-200 p-4 rounded-3xl text-center">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Para famíliares
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Para cuidadores
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Assistência domiciliar
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Cuidados residenciais
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Ajuda
             </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-2xl">
+            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
               Sobre nós
             </a>
           </div>
@@ -85,13 +92,91 @@ function App() {
           </div>
 
           <div className="bg-green-50 p-4 rounded-lg shadow-md flex flex-col items-center text-center">
-            <Headset className="size-5 mb-2"/>
+            <Headset className="size-5 mb-2" />
             <h3 className="text-lg font-semibold">Especialistas disponíveis</h3>
             <p className="text-sm text-gray-600">
               Equipes de suporte disponíveis 7 dias por semana.
             </p>
           </div>
         </div>
+      </div>
+
+      {/* info cuidadores*/}
+      <div>
+        <h2 className="px-4 text-2xl font-grotesque">
+          Serviços e cuidados para idosos
+        </h2>
+        <div className="flex">
+          <p className="font-cairo pl-4 pr-3">
+            Todos os cuidadores aprovados por idosos:
+          </p>
+          <p className="flex pr-3">
+            <ClipboardCheck className="text-teal-400" /> Forneça 2+ refêrencias
+            verificadas
+          </p>
+          <p className="flex pr-3">
+            <CalendarCheck className="text-teal-400" />
+            Ter no mínimo 6 meses de experiência
+          </p>
+          <p className="flex">
+            <CircleCheck className="text-teal-400" />
+            Tenha um DBS/PVG limpo e aprimorado
+          </p>
+        </div>
+      </div>
+
+      {/* Serviços */}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+          <div className="bg-green-50 rounded-2xl shadow-md flex flex-col">
+            <img src="./servico1.png" alt="serviço 1" className="rounded-2xl" />
+            <h2 className="pl-4 pt-4 text-2xl font-inter">
+              Cuidados ao Domicílio
+            </h2>
+            <p className="text-xs pl-4 pb-4">Suporte 24 horas em sua casa</p>
+            <p className=" text-base pl-4 pr-4">
+              Um cuidador se muda para sua casa para fornecer cuidados
+              personalizados. Ele se adaptará à sua rotina e estilo de vida, e
+              apoiará sua independência.
+            </p>
+          </div>
+          <div className="bg-green-50 rounded-2xl shadow-md flex flex-col">
+            <img src="./servico2.png" alt="serviço 1" className="rounded-2xl" />
+            <h2 className="pl-4 pt-4 text-2xl font-inter">
+              Cuidados de Curto Prazo
+            </h2>
+            <p className="text-xs pl-4 pb-4">
+              Suporte 24 horas, por apenas 3 dias por vez
+            </p>
+            <p className=" text-base pl-4 pb-4 pr-4">
+              Um cuidador se muda para sua casa por alguns dias ou semanas,
+              oferecendo cuidados paliativos personalizados enquanto seu
+              cuidador principal estiver ausente ou após alta hospitalar ou
+              emergência.
+            </p>
+          </div>
+          <div className="bg-green-50 rounded-2xl shadow-md flex flex-col">
+            <img src="./servico3.png" alt="serviço 1" className="rounded-2xl" />
+            <h2 className="pl-4 pt-4 text-2xl font-inter">
+              Visitas de cuidados
+            </h2>
+            <p className="text-xs pl-4">
+              Um cuidador fará uma visita por algumas horas nos dias escolhidos,
+              em um horário pré-acordado.
+            </p>
+            <p className=" text-base p-4">
+              De visitas domiciliares ocasionais a visitas semanais regulares,
+              nossa plataforma online é tudo o que você precisa para encontrar
+              um cuidador adequado e criar uma programação que se adapte
+              perfeitamente à sua vida.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <div>
+        
       </div>
     </>
   );
