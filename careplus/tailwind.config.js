@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        "footer": "#EBF1EE",
+      },
       fontFamily:{
         'cairo' : ['Cairo', 'sans-serif'],
         'dosis' : ['Dosis', 'sans-serif'],

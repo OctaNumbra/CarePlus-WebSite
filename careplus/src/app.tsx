@@ -7,6 +7,7 @@ import {
   Headset,
   ClipboardCheck,
   CircleCheck,
+  SquarePen,
 } from "lucide-react";
 
 function App() {
@@ -22,27 +23,7 @@ function App() {
       {/* header */}
       <div className="flex items-center justify-between p-4">
         <div className="flex-1 flex justify-center">
-          <img src="./CarePlus.svg" alt="CarePlus Logo" className="h-14 w-14" />
-          <div className="flex space-x-10 bg-neutral-200 p-4 rounded-3xl text-center">
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Para famíliares
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Para cuidadores
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Assistência domiciliar
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Cuidados residenciais
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Ajuda
-            </a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 text-lg">
-              Sobre nós
-            </a>
-          </div>
+          <img src="./CarePlus.svg" alt="CarePlus Logo" className="size-20" />
         </div>
       </div>
 
@@ -56,7 +37,11 @@ function App() {
         >
           {data.map((item) => (
             <SwiperSlide key={item.id}>
-              <img src={item.image} alt="Slider" className="slide-item" />
+              <img
+                src={item.image}
+                alt="Slider"
+                className="slide-item rounded-3xl"
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -127,7 +112,7 @@ function App() {
 
       {/* Serviços */}
       <div className="flex justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 p-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
           <div className="bg-green-50 rounded-2xl shadow-md flex flex-col">
             <img src="./servico1.png" alt="serviço 1" className="rounded-2xl" />
             <h2 className="pl-4 pt-4 text-2xl font-inter">
@@ -174,9 +159,51 @@ function App() {
         </div>
       </div>
 
-      {/* footer */}
+      {/* Download */}
       <div>
-        
+        <div className="flex justify-center pb-4">
+          <img
+            src="./download.png"
+            alt="download banner"
+            className="size-[31,8%] rounded-3xl"
+          />
+        </div>
+        <div className="pl-4 pt-4 pr-4">
+          <h1 className="font-dosis text-6xl p-5 md:pl-10">Como Funciona?</h1>
+          <p className="font-dosis text-2xl  pl-4 pr-4 md:pl-10">
+            Nossa plataforma facilita a busca por cuidadores autônomos de
+            confiança, o gerenciamento de seus cuidados e o acesso a suporte
+            dedicado quando você precisar.
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <div className="bg-green-50 p-4 rounded-lg shadow-md flex flex-col items-center text-center text-2xl">
+              <SquarePen/>
+              <p>Compartilhe sua solicitação de atendimento</p>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg shadow-md flex flex-col items-center text-center text-2xl">
+              <Headset className=""/>
+              <p>Selecione seu cuidador</p>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg shadow-md flex flex-col items-center text-center text-2xl">
+              <CalendarCheck className=""/>
+              <p>Prepare-se para o atendimento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <div className=" justify-center bg-footer">
+        <div className="border-black/60 border-2">
+          <div className="flex justify-center">
+            <img src="./CarePlus.svg" alt="CarePlus Logo" className="size-14" />
+            <p className="font-grotesque text-2xl pb-4 pt-4">
+              <b>Care Plus</b>
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
